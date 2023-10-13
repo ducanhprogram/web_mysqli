@@ -1,0 +1,168 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*  ===============Common================= */
+ul {
+    display: block;
+}
+
+
+.wrapper {
+    border: 1px solid #000;
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
+    
+}
+
+.header {
+    background-image: url("../images/banner-soccer.jpg");
+    background-repeat: no-repeat;
+    border: 1px solid #ff80ff;
+    background-size: 100% 180px;
+    height: 180px;
+    width: 100%;
+
+}
+
+.menu {
+    border: 1px solid #1aff8c;
+    height: 50px;
+    width: 100%;
+    background: #00e6ac;
+}
+
+ul.list_menu {
+    padding: 0;
+    list-style: none;
+    width: 60%;
+    margin: 0 auto;
+    line-height: 27px;
+}
+
+ul.list_menu li {
+    float: left;
+    margin: 7px;
+    padding: 5px;
+}
+
+ul.list_menu a {
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    font-weight:700;
+}
+
+ul.list_menu li:hover {
+    background: #ebc334;
+}
+
+
+#main{
+    border: 1px solid #00ff80;
+    height: auto;
+    width: 100%;
+}
+
+.sidebar {
+    border: 1px solid #000066;
+    height: 390px;
+    width: 20%;
+    margin-top: 5px;
+    margin-left: 5px;
+    float: left;
+
+}
+
+ul.list_sidebar {
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    line-height: 27px;
+}
+
+ul.list_sidebar li {
+    margin: 7px;
+    padding: 5px;
+}
+
+ul.list_sidebar li a {
+    text-decoration: none;
+    text-align: center;
+    color: #031cfc;
+    font-weight:700;
+    display: block;
+    text-align: left;
+}
+
+ul.list_sidebar li:hover {
+    background: #fe6402;
+}
+
+.maincontent {
+    border: 1px solid #ff0000;
+    height: auto;
+    width: 78%;
+    margin-top: 5px;
+    margin-left: 5px;
+    float: right;
+}
+
+ul.product_list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+
+
+
+ul.product_list li {
+    border: 1px dashed #000;
+    width: 23%;
+    margin: 5px;
+    float: left;
+    background: aquamarine;
+    height: 300px;
+}
+
+
+ul.product_list li img {
+    width: 100%;
+}
+
+p.price_product {
+    text-align: center;
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+}
+p.title_product {
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+ul.product_list li a {
+    text-decoration: none;
+}
+
+.footer {
+    border: 1px solid #ff1a8c;
+    height: 100px;
+    width: 100%;
+    background: #00cc99;
+}
+
+p.footer_copyright {
+    text-align: center;
+    color: #000;
+}
+.clear {
+    clear: both;
+}
