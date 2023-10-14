@@ -1,4 +1,4 @@
-<p>thêm danh mục sản phẩm</p>
+<p>Thêm danh mục sản phẩm</p>
 <table border="1" width="50%" style = "border-collapse: collapse;">
     <form action="modules/quanlydanhmucsp/xuly.php" method="POST">
   <tr>
