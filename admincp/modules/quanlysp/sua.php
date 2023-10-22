@@ -10,7 +10,7 @@
 while($row = mysqli_fetch_array($query_sua_sp)) {
 ?>
 
-    <form  method="POST" action="modules/quanlysp/xuly.php?idsanpham=<?php echo $row['id_sanpham'] ?>" enctype="multipart/form-data">
+    <form  method="post" action="modules/quanlysp/xuly.php?idsanpham=<?php echo $row['id_sanpham'] ?>" enctype="multipart/form-data">
   <tr>
     <td>Tên sản phẩm</td>
     <td><input type="text" value="<?php echo $row['tensanpham'] ?>" name="tensanpham"></td>

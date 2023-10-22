@@ -1,41 +1,30 @@
+<?php
+    $sql_pro = "SELECT * FROM  tbl_sanpham, tbl_danhmuc WHERE tbl_sanpham.id_danhmuc =tbl_danhmuc.id_danhmuc 
+    ORDER BY tbl_sanpham.id_sanpham DESC LIMIT 25";
+
+    $query_pro = mysqli_query($mysqli,$sql_pro);
+    //get ten danh muc
+
+
+?>
+
+
 <h3>Sản phẩm mới nhất</h3>
             <ul class="product_list">
+                <?php
+            while($row = mysqli_fetch_array($query_pro)) {
+                ?>
                 <li>
-                    <a href="">
-                        <img src="images/Ao.png" alt="">
-                        <p class="title_product">Tên sản phẩm: Áo thể theo</p>
-                        <p class="price_product">Giá: 3000000 vnđ</p>
+                    <a href="index.php?quanly=sanpham&id=<?php echo $row['id_sanpham'] ?>">
+                        <img src="admincp/modules/quanlysp/uploads/<?php echo $row['hinhanh'] ?>">
+                        <p class="title_product">Tên sản phẩm: <?php echo $row['tensanpham']  ?></p>
+                        <p class="price_product">Giá: <?php echo number_format($row['giasp'], 0, ',','.').'vnđ' ?> vnđ</p>
+                        <p style="text-align:center; color: #d51ab8"></p><?php echo $row['tendanhmuc']  ?></p>       
                     </a>
                 </li>
 
-                <li>
-                    <img src="images/Quan.png" alt="">
-                    <p class="title_product">Tên sản phẩm: Áo thể theo</p>
-                    <p class="price_product">Giá: 3000000 vnđ</p>
-                </li>
-
-                <li>
-                    <img src="images/GangTay.png" alt="">
-                    <p class="title_product">Tên sản phẩm: Găng tay </p>
-                    <p class="price_product">Giá: 3000000 vnđ</p>
-                </li>
-
-
-                <li>
-                    <img src="images/Giay.png" alt="">
-                    <p class="title_product">Tên sản phẩm: Giầy thể thao</p>
-                    <p class="price_product">Giá: 3000000 vnđ</p>
-                </li>
-
-                <li>
-                    <img src="images/Tui.png" alt="">
-                    <p class="title_product">Tên sản phẩm: Túi thể theo</p>
-                    <p class="price_product">Giá: 3000000 vnđ</p>
-                </li>
-
-                <li>
-                    <img src="images/Bong.png" alt="">
-                    <p class="title_product">Tên sản phẩm: Bóng đá</p>
-                     <p class="price_product">Giá: 3000000 vnđ</p>
-                </li>
+                <?php
+                }
+                ?>
+                
             </ul>

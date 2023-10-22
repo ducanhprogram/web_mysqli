@@ -25,7 +25,7 @@
 
 $i = 0;           // lấy ra từng mảng
 while($row = mysqli_fetch_array($query_lietke_sp)) {
-    $i++;
+    $i++; 
 ?>
   <tr>
     <td><?php echo $i  ?></td>

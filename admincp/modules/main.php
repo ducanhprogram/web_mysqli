@@ -9,8 +9,8 @@
                 $tam = $_GET['action'];
                 $query = $_GET['query'];
             }else {
-                $tam = ' ';
-                $query = ' ';
+                $tam = '';
+                $query = '';
             }
             if($tam=='quanlydanhmucsanpham' && $query=='them') {
                 include("modules/quanlydanhmucsp/them.php");
