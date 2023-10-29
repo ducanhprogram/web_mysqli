@@ -1,9 +1,11 @@
-<?php
-    session_start();
-
-?>
 
 <p>Giỏ hàng</p>
+<?php
+  if(isset($_SESSION["dangky"])) {
+    echo 'Xin chào: '.'<span style="color: red;">'.$_SESSION['dangky'].'</span>';
+    echo $_SESSION['id_khachhang'];
+  }
+?>
 
 <?php
     if(isset($_SESSION["cart"])){
@@ -63,6 +65,21 @@ th, td {
     <td colspan="8">
    <p style="float:left;"></p>Tổng tiền: <?php echo number_format($tongtien,0,',','.'). 'vnđ'; ?></p>
     <p style="float: right;"><a href="pages/main/themgiohang.php?xoatatca=1">Xóa tất cả</a></p>
+    <div style="clear: both;"></div>
+
+    <?php
+        if(isset($_SESSION['dangky'])){
+          ?>
+          <p><a href="pages/main/thanhtoan.php">Đặt hàng</a></p>
+          <?php
+        }else{
+         ?>
+         <p><a href="index.php?quanly=dangky">Đăng ký đặt hàng</a></p>
+     <?php
+        }
+        ?>
+
+
     </td>
 </tr>
 <?php

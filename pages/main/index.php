@@ -1,6 +1,16 @@
 <?php
+    if(isset($_GET['trang'])) {
+        $page = $_GET['trang'];
+    }else {
+        $page =1;
+    }
+    if($page==''|| $page ==1) {
+        $begin = 0;
+    }else {
+        $begin = ($page*3)-3;
+    }
     $sql_pro = "SELECT * FROM  tbl_sanpham, tbl_danhmuc WHERE tbl_sanpham.id_danhmuc =tbl_danhmuc.id_danhmuc 
-    ORDER BY tbl_sanpham.id_sanpham DESC LIMIT 25";
+    ORDER BY tbl_sanpham.id_sanpham DESC LIMIT $begin,3";  // begin là bắt đầu từ và lấy 3 sản phẩm
 
     $query_pro = mysqli_query($mysqli,$sql_pro);
     //get ten danh muc
@@ -27,4 +37,49 @@
                 }
                 ?>
                 
+            </ul>
+
+            <div style="clear:both;"></div>
+            <style type="text/css">
+                ul.list_trang {
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                }
+
+                ul.list_trang li {
+                    
+                    float: left;        
+                    margin: 5px;                
+                    display: block;
+
+                }
+
+                ul.list_trang li a {
+                    background: burlywood;
+                    padding: 5px 13px;
+                    color: #000;
+                    text-align: center;
+                    text-decoration: none;
+                }
+
+            </style>
+           
+            <?php 
+            $sql_trang = mysqli_query($mysqli,"SELECT * FROM tbl_sanpham" );
+            $row_count = mysqli_num_rows($sql_trang);
+             $trang = ceil($row_count / 3);
+            ?>
+           <span>Trang hiện tại: <?php echo $page ?>/<?php echo $trang ?></span>
+
+            <ul class="list_trang">
+                <?php
+                for($i=1; $i<=$trang;$i++) {
+                ?>
+                <li><a  <?php if($i==$page){echo 'style="background: brown !important;"';}
+                else{echo '';} ?> href="index.php?trang=<?php echo $i ?>"><?php echo $i ?></a></li>
+                <?php
+                }
+                ?>
+
             </ul>
