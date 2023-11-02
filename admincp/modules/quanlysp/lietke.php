@@ -44,7 +44,7 @@ while($row = mysqli_fetch_array($query_lietke_sp)) {
       ?>
     </td>
 
-    <td>
+    <td class="action-links">
         <a href="modules/quanlysp/xuly.php?idsanpham=<?php echo $row['id_sanpham'] ?>">Xóa</a> |  <a href="?action=quanlysp&query=sua&idsanpham=<?php echo $row['id_sanpham'] ?>">Sửa</a> 
     </td>
   </tr>
@@ -53,3 +53,44 @@ while($row = mysqli_fetch_array($query_lietke_sp)) {
 }
   ?>
 </table>
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .action-links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .action-links a {
+        text-decoration: none;
+        padding: 5px 10px;
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 5px;
+        margin: 0 5px; /* Tạo khoảng cách ngang giữa các phần tử */
+    }
+
+    .action-links a:hover {
+        background-color: #45a049;
+    }
+</style>
+

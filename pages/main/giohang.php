@@ -1,5 +1,65 @@
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
 
-<p>Giỏ hàng</p>
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100vh; /* Điều chỉnh chiều cao tối đa của hình ảnh */
+  }
+
+  .fa-style {
+    font-size: 14px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  /* .fa-style:hover {
+    background-color: red;
+  } */
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  /* a:hover {
+    color: #4CAF50;
+  } */
+
+  p a {
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+  }
+
+  p a:hover {
+    background-color: brown;
+  }
+
+  td a:hover {
+    background-color: brown;
+  }
+
+
+</style>
+
+
+
+<h3>Giỏ hàng</h3>
 <?php
   if(isset($_SESSION["dangky"])) {
     echo 'Xin chào: '.'<span style="color: red;">'.$_SESSION['dangky'].'</span>';

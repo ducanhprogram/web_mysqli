@@ -7,7 +7,7 @@
         $diachi = $_POST['diachi'];
         // mysqli là biến kết nối csdl
         $sql_dangky = mysqli_query($mysqli, "INSERT INTO tbl_dangky(tenkhachhang, email, diachi, matkhau, dienthoai)
-         VALUE('".$tenkhachhang."','".$email."','".$dienthoai."','".$matkhau."','".$diachi."')");
+         VALUE('".$tenkhachhang."','".$email."','".$diachi."','".$matkhau."','".$dienthoai."')");
         
         if($sql_dangky) {
             echo '<p style="color: green">Bạn đã đăng ký thành công!!!</p>';
@@ -20,11 +20,40 @@
 ?>
 
 
-<p>Đăng ký thành viên</p>
+<h3 style="text-align: center; margin-top: 20px;">Đăng ký thành viên</h3>
 <style>
-    table.dangky tr td {
-        padding: 5px;
-    }
+    table.dangky {
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        table.dangky tr td {
+            padding: 10px;
+        }
+
+        table.dangky tr td input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 5px;
+        }
+
+        table.dangky tr td input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        table.dangky tr td input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        table.dangky tr td a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+    </style>
 </style>
 <form action="" method="POST">
 <table class="dangky" border="1" width="50%" style="border-collapse: collapse;">

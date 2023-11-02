@@ -28,9 +28,9 @@ if(isset($_POST['themsanpham'])) {
 }elseif(isset($_POST['suasanpham'])) {
     //sửa
     if($hinhanh!='') {
-        move_uploaded_file($hinhanh_tmp, 'uploads/'.$hinhanh);
+        move_uploaded_file($hinhanh_tmp,'uploads/'.$hinhanh);
        
-    $sql_update ="UPDATE tbl_sanpham SET tensanpham='".$tensanpham."', masp='".$masp."',giasp='".$giasp."',soluong='".$soluong."',hinhanh='".$hinhanh."',tomtat='".$tomtat."',noidung= ".$noidung."' ,tinhtrang='".$tinhtrang."',id_danhmuc ='".$danhmuc."'  WHERE id_sanpham='$_GET[idsanpham]'" ;
+    $sql_update ="UPDATE tbl_sanpham SET tensanpham='".$tensanpham."', masp='".$masp."',giasp='".$giasp."',soluong='".$soluong."',hinhanh='".$hinhanh."',tomtat='".$tomtat."',noidung='".$noidung."' ,tinhtrang='".$tinhtrang."',id_danhmuc ='".$danhmuc."'  WHERE id_sanpham='$_GET[idsanpham]'" ;
 
     //xóa hình ảnh cũ
     $sql = "SELECT * FROM tbl_sanpham WHERE id_sanpham = '$_GET[idsanpham]' LIMIT 1";

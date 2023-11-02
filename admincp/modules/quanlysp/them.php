@@ -1,4 +1,4 @@
-<p>Thêm sản phẩm</p>
+<h3>Thêm sản phẩm</h3>
 <table border="1" width="100%" style = "border-collapse: collapse;">
     <form action="modules/quanlysp/xuly.php" method="POST" enctype="multipart/form-data">
   <tr>
@@ -71,3 +71,54 @@
   </form>
 
 </table>
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    input[type="text"], textarea, select, input[type="file"] {
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 5px;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 10px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 5px;
+    }
+</style>

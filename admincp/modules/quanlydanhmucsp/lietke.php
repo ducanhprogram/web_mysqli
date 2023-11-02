@@ -5,7 +5,7 @@
 ?>
 
 
-<p>Liệt kê danh mục sản phẩm</p>
+<h3>Liệt kê danh mục sản phẩm</h3>
 <table border="1" style = " width:100%" style =" border-collapse: collapse; " >
   <tr>
     <th>Id</th>
@@ -33,3 +33,38 @@ while($row = mysqli_fetch_array($query_lietke_danhmucsp)) {
   ?>
 
 </table>
+
+
+<style>
+    table {
+        /* width: 100%; */
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr td > a {
+        text-decoration: none;
+        padding: 5px 10px;
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 5px;
+    }
+
+    a:hover {
+        background-color: #45a049;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+

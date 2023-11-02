@@ -13,8 +13,9 @@
             $_SESSION['dangnhap'] = $taikhoan;
             header("Location:index.php");
         }else {
-            echo '<script>alert("Tài khoản hoặc Mật Khẩu không đúng, vui lòng nhập lại!!!");</script>';
-            header('Location:login.php');
+            
+            $error_message = "Tài khoản hoặc Mật Khẩu không đúng, vui lòng nhập lại!!!";
+            // header('Location:login.php');
         }
     }
 ?>
@@ -27,20 +28,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng Nhập Admincp</title>
 
-    <style type="text/css">
+     <style>
         body {
+            font-family: Arial, sans-serif;
             background: #f2f2f2;
         }
+
         .wrapper-login {
             width: 20%;
             margin: 0 auto;
+            margin-top: 10%;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        table.table-login {
+        .table-login {
             width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+            margin-bottom: 20px;
         }
-        table.table-login tr td {
-            padding: 5px;
+
+        .table-login tr td {
+            padding: 10px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        p.error-message {
+            color: red;
+            font-size: 16px;
+            text-align: center;
         }
     </style>
 </head>
@@ -67,6 +108,11 @@
     </form>
 </div>
 
+<?php
+            if(isset($error_message)) {
+                echo '<p class="error-message">' . $error_message . '</p>';
+            }
+        ?>
 <script type="text/javascirpt" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 </html>

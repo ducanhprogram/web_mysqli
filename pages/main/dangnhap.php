@@ -19,14 +19,14 @@
 ?>
 
 
-<form action="" autocomplete="off" method="POST">
+<form  action="" autocomplete="off" method="POST">
     <table border="1" width= "30%" class="table-login" style="text-align: center; border-collapse: collapse;">
         <tr>
             <td colspan="2">Đăng nhập khách hàng</td>
         </tr>
         <tr>
             <td>Tài Khoản</td>
-            <td><input type="text"  size= "30%" name="email" placeholder="Email...."></td>
+            <td><input type="text" class="text" size= "30%" name="email" placeholder="Email...."></td>
         </tr>
         <tr>
             <td>Mật Khẩu</td>
@@ -34,7 +34,62 @@
         </tr>
 
         <tr>
-            <td colspan="2"><input type="submit" name="dangnhap" value="Đăng nhập"></td>
+            <td colspan="2"><input class="login-submit-button" type="submit" name="dangnhap" value="Đăng nhập"></td>
         </tr>
     </table>
     </form>
+
+  
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+    }
+.table-login {
+        width: 30%;
+        text-align: center;
+        border-collapse: collapse;
+        margin: 0 auto;
+        margin-top: 5%;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .table-login tr td {
+        padding: 10px;
+    }
+
+  .text,
+    input[type="password"] {
+        /* width: 100%; */
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .login-submit-button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .login-submit-button:hover {
+        background-color: #45a049;
+    }
+
+    p.error-message {
+        color: red;
+        font-size: 16px;
+        text-align: center;
+    }
+</style>
+
+    

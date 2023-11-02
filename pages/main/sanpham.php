@@ -1,4 +1,11 @@
-<p>Chi tiết sản phẩm</p>
+<h3>Chi tiết sản phẩm</h3>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style>
+
+</style>
+
+
 
 <?php
      $sql_chitiet = "SELECT * FROM  tbl_sanpham, tbl_danhmuc WHERE tbl_sanpham.id_danhmuc= tbl_danhmuc.id_danhmuc 
@@ -11,10 +18,10 @@
 
     <div class="wrapper_chitiet">
     <div class="hinhanh_sanpham">
-     <img width= "80%" src="admincp/modules/quanlysp/uploads/<?php echo $row_chitiet['hinhanh']  ?>">
+     <img width= "100%" src="admincp/modules/quanlysp/uploads/<?php echo $row_chitiet['hinhanh']  ?>">
     </div>
-    <form method="POST" action="pages/main/themgiohang.php?idsanpham=<?php echo $row_chitiet['id_sanpham'] ?>">
-            <div class="chitietsanpham">
+    <form  method="POST" action="pages/main/themgiohang.php?idsanpham=<?php echo $row_chitiet['id_sanpham'] ?>">
+            <div class="chitiet_sanpham">
             <h3>Tên sản phẩm: <?php echo $row_chitiet['tensanpham'] ?></h3>
             <p>Mã sản phẩm: <?php echo $row_chitiet['masp'] ?></p>
             <p>Giá sản phẩm: <?php echo number_format($row_chitiet['giasp'],0,',','.').'vnđ' ?></p>
