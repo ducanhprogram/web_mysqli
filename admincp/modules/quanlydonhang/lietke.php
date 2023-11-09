@@ -47,7 +47,6 @@
     <th>Tình trạng</th>
     <th>Quản lý</th>
 
-   
 </tr>
 
 <?php

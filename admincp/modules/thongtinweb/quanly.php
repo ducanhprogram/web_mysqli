@@ -1,4 +1,4 @@
-<h3 style="text-align: center; margin-top: 20px;">Quản lý thông tin website</h3>
+<h3 style="text-align: center; margin-top: 20px;">Quản lý thông tin liên hệ</h3>
 
 <style>
         table {
@@ -50,7 +50,7 @@
   </tr>
 
   <tr>
-    <td collapse="2"><input type="submit" name="submitlienhe" value="Cập nhập"></td>
+    <td collapse="2"><input type="submit" name="submitlienhe" value="Cập nhật"></td>
   </tr>
   <?php
     }

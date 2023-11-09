@@ -11,7 +11,7 @@
             }
             if($tam=='danhmucsanpham') {
                 include("main/danhmuc.php");
-            }elseif($tam == 'giohang'){
+            }elseif($tam =='giohang'){
                 include("main/giohang.php");
             }elseif($tam == 'lienhe') {
                 include("main/lienhe.php");

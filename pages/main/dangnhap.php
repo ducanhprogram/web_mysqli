@@ -5,13 +5,14 @@
         $matkhau = md5($_POST["password"]);
         $sql = "SELECT * FROM tbl_dangky WHERE email= '".$email."' AND matkhau = '".$matkhau."' LIMIT 1 ";
         $row = mysqli_query($mysqli, $sql);
-        $count = mysqli_num_rows($row);  // đếm số dòng trong admin đó: 
+        $count = mysqli_num_rows($row);  // đếm số dòng trong bản ghi truy vấn
         if($count > 0) {
+            // hàn này trả về một mảng có thể truy vấn bằng cột
             $row_data = mysqli_fetch_array($row);
             // nếu điền đúng: đặt session mới -> session đăng nhập gắn là tài khoản: ducanhadmin 
             $_SESSION['dangky'] = $row_data['tenkhachhang'];
             $_SESSION['id_khachhang'] = $row_data['id_dangky'];
-            header("Location:index.php?quanly=giohang");
+            header('Location:index.php?quanly=giohang');
         }else {
             echo '<p style="color:red;">Mật khẩu hoặc Email sai, vui lòng nhập lại.</p>';
         }

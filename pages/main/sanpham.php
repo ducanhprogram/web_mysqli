@@ -1,10 +1,5 @@
-<h3>Chi tiết sản phẩm</h3>
+<h3 style="padding-bottom: 10px;">Chi tiết sản phẩm</h3>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<style>
-
-</style>
-
 
 
 <?php

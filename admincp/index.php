@@ -13,8 +13,8 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://example.com/background_image.jpg'); /* Thay thế bằng URL của hình ảnh nền bóng đá */
-            background-size: cover;
+            /* background-image: url('https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/04/game-bong-da-huyen-thoai-fifa-sap-khong-con.png'); Thay thế bằng URL của hình ảnh nền bóng đá */
+            background-size: 50% 50%; /* Thay đổi kích thước ở đây */
             background-position: center;
         }
 

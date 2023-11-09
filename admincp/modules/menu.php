@@ -22,12 +22,12 @@
 
 
 <ul class="admincp_list">
-    <li><a class="dmsp" href="index.php?action=quanlydanhmucsanpham&query=them">Quản lý danh mục sản phẩm</a></li>
-    <li><a class="qlsp" href="index.php?action=quanlysp&query=them">Quản lý sản phẩm</a></li>
+    <li><a href="index.php?action=quanlydanhmucsanpham&query=them">Quản lý danh mục sản phẩm</a></li>
+    <li><a href="index.php?action=quanlysp&query=them">Quản lý sản phẩm</a></li>
     <!-- <li><a class="qlbv" href="index.php?action=quanlybaiviet&query=them">Quản lý bài viết</a></li>
     <li><a class="qldmbv" href="index.php?action=quanlydanhmucbaiviet&query=them">Quản lý danh mục bài viết</a></li> -->
-    <li><a class="qldh" href="index.php?action=quanlydonhang&query=lietke">Quản lý đơn hàng</a></li>
-    <li><a href="index.php?action=quanlyweb&query=capnhat">Quản lý website</a></li>
+    <li><a href="index.php?action=quanlydonhang&query=lietke">Quản lý đơn hàng</a></li>
+    <li><a href="index.php?action=quanlyweb&query=capnhat">Quản lý thông tin liên hệ</a></li>
 
 
   

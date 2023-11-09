@@ -5,7 +5,7 @@
 ?>
 
 
-<p>Liệt kê sản phẩm</p>
+<h3>Liệt kê sản phẩm</h3>
 <table border="1" style = " width:100%" style =" border-collapse: collapse; " >
   <tr>
     <th>Id</th>

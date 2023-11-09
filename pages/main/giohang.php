@@ -54,15 +54,18 @@
     background-color: brown;
   }
 
+  .h3_giohang {
+    margin-bottom: 20px;
+  }
 
 </style>
 
 
 
-<h3>Giỏ hàng</h3>
+<h3 class="h3_giohang">Giỏ hàng</h3>
 <?php
   if(isset($_SESSION["dangky"])) {
-    echo 'Xin chào: '.'<span style="color: red;">'.$_SESSION['dangky'].'</span>';
+    echo 'Xin chào: '.'<span style="color: red; margin-right: 10px;">'.$_SESSION['dangky'].'</span>';
     echo $_SESSION['id_khachhang'];
   }
 ?>
